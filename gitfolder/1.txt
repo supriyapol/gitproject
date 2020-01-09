@@ -1,0 +1,58 @@
+git commit -am "File1 updated for faeture login"
+[master aba981c] File1 updated for faeture login
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git commit -am "File1 updated for faeture logout"
+[master aed1c94] File1 updated for faeture logout
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git log
+commit aed1c94d8e7b66215b412306a0e31b6453aecf95 (HEAD -> master)
+Author: supriya <supriya_pol@persistent.com>
+Date:   Thu Jan 9 14:33:17 2020 +0530
+
+    File1 updated for faeture logout
+
+commit aba981c6b33443e591b0a6c4d76cdf295371a9db
+Author: supriya <supriya_pol@persistent.com>
+Date:   Thu Jan 9 14:32:11 2020 +0530
+
+    File1 updated for faeture login
+
+commit 2ca81c1d0463f736cc3f841d4c6f07a383c62070
+Author: supriya <supriya_pol@persistent.com>
+Date:   Thu Jan 9 14:28:30 2020 +0530
+
+    File1 created with hello world  initial commit
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git log --oneline
+aed1c94 (HEAD -> master) File1 updated for faeture logout
+aba981c File1 updated for faeture login
+2ca81c1 File1 created with hello world  initial commit
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git log --oneline -2
+aed1c94 (HEAD -> master) File1 updated for faeture logout
+aba981c File1 updated for faeture login
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$
