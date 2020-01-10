@@ -1,9 +1,9 @@
 Hello world!!!
 
-feature 1 - login - updated by team member for checking login 
+feature 1 -> login - updated by team member for checking login 
 
-feature 2 - logout
+feature 2 -> logout
 
 bug - fixed
 
-bug2 - fixed
+change the file for editing the file
