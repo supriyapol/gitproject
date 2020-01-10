@@ -5,3 +5,5 @@ feature 1 - login
 feature 2 - logout
 
 bug - fixed
+
+bug2 - fixed
