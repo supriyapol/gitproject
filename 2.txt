@@ -1,0 +1,6 @@
+checkout - switching ) version ,branches , tags ,take a look on file/folder
+
+undo - 
+    chakout -safe undo unstatged or uncommited 
+rever - safe undo commits 
+reset - unsafe undo commited,recommended for privte or local,file level and commit

@@ -1,0 +1,269 @@
+ git status
+HEAD detached at 5216d06
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project ((5216d06...))
+$ git checkout master
+Previous HEAD position was 5216d06 Filetobedeleted.txt
+Switched to branch 'master'
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .class
+        2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .class
+        2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git branch
+* master
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git branch bug1
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git branch
+  bug1
+* master
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (bug1)
+$ git branch
+* bug1
+  master
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (bug1)
+$ git status
+On branch bug1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   File1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .class
+        2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (bug1)
+$ git log --oneline
+3c76059 (HEAD -> bug1, master) ?Revert "File1 updated for feature logout"
+22c7af6 File updates
+5216d06 Filetobedeleted.txt
+457e10f File1 updated for feature logout
+aed1c94 File1 updated for faeture logout
+aba981c File1 updated for faeture login
+2ca81c1 File1 created with hello world  initial commit
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (bug1)
+$ git commit -am "File updated to fix bug1 "
+[bug1 7f51177] File updated to fix bug1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (bug1)
+$ git log --oneline
+7f51177 (HEAD -> bug1) File updated to fix bug1
+3c76059 (master) ?Revert "File1 updated for feature logout"
+22c7af6 File updates
+5216d06 Filetobedeleted.txt
+457e10f File1 updated for feature logout
+aed1c94 File1 updated for faeture logout
+aba981c File1 updated for faeture login
+2ca81c1 File1 created with hello world  initial commit
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (bug1)
+$ git checkout master
+Switched to branch 'master'
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git log --oneline
+3c76059 (HEAD -> master) ?Revert "File1 updated for feature logout"
+22c7af6 File updates
+5216d06 Filetobedeleted.txt
+457e10f File1 updated for feature logout
+aed1c94 File1 updated for faeture logout
+aba981c File1 updated for faeture login
+2ca81c1 File1 created with hello world  initial commit
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git merge bug1
+Updating 3c76059..7f51177
+Fast-forward
+ File1.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git delete
+git: 'delete' is not a git command. See 'git --help'.
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git branch -d bug1
+Deleted branch bug1 (was 7f51177).
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git log --oneline
+7f51177 (HEAD -> master) File updated to fix bug1
+3c76059 ?Revert "File1 updated for feature logout"
+22c7af6 File updates
+5216d06 Filetobedeleted.txt
+457e10f File1 updated for feature logout
+aed1c94 File1 updated for faeture logout
+aba981c File1 updated for faeture login
+2ca81c1 File1 created with hello world  initial commit
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git merge bug2
+merge: bug2 - not something we can merge
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git commit -am "File updated to fix bug2 "
+[master ca61528] File updated to fix bug2
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git merge bug2
+merge: bug2 - not something we can merge
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git log --oneline
+ca61528 (HEAD -> master) File updated to fix bug2
+7f51177 File updated to fix bug1
+3c76059 ?Revert "File1 updated for feature logout"
+22c7af6 File updates
+5216d06 Filetobedeleted.txt
+457e10f File1 updated for feature logout
+aed1c94 File1 updated for faeture logout
+aba981c File1 updated for faeture login
+2ca81c1 File1 created with hello world  initial commit
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git commit -am "File updated to fix bug2 "
+On branch master
+Untracked files:
+        .class
+        2.txt
+
+nothing added to commit but untracked files present
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git log --oneline
+ca61528 (HEAD -> master) File updated to fix bug2
+7f51177 File updated to fix bug1
+3c76059 ?Revert "File1 updated for feature logout"
+22c7af6 File updates
+5216d06 Filetobedeleted.txt
+457e10f File1 updated for feature logout
+aed1c94 File1 updated for faeture logout
+aba981c File1 updated for faeture login
+2ca81c1 File1 created with hello world  initial commit
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git merge bug2
+merge: bug2 - not something we can merge
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git merge bug1
+merge: bug1 - not something we can merge
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git branch bug2
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git log --oneline
+ca61528 (HEAD -> master, bug2) File updated to fix bug2
+7f51177 File updated to fix bug1
+3c76059 ?Revert "File1 updated for feature logout"
+22c7af6 File updates
+5216d06 Filetobedeleted.txt
+457e10f File1 updated for feature logout
+aed1c94 File1 updated for faeture logout
+aba981c File1 updated for faeture login
+2ca81c1 File1 created with hello world  initial commit
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (bug2)
+$ git status
+On branch bug2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   File1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .class
+        2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (bug2)
+$ git commit -am "File updated to fix bug2 "
+[bug2 552412e] File updated to fix bug2
+ 1 file changed, 3 insertions(+)
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (bug2)
+$ git log --oneline
+552412e (HEAD -> bug2) File updated to fix bug2
+ca61528 (master) File updated to fix bug2
+7f51177 File updated to fix bug1
+3c76059 ?Revert "File1 updated for feature logout"
+22c7af6 File updates
+5216d06 Filetobedeleted.txt
+457e10f File1 updated for feature logout
+aed1c94 File1 updated for faeture logout
+aba981c File1 updated for faeture login
+2ca81c1 File1 created with hello world  initial commit
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git merge bug2
+Updating ca61528..552412e
+Fast-forward
+ File1.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git branch -D bug2
+Deleted branch bug2 (was 552412e).
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (master)
+$ git checkout -b bug2
+Switched to a new branch 'bug2'
+
+supriya_pol@eltp-java-2 MINGW64 /c/git project (bug2)
+$
