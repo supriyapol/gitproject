@@ -1,12 +1,9 @@
 Hello world!!!
 
-feature 1 - login
+feature 1 - login - updated by team member for checking login 
 
 feature 2 - logout
 
 bug - fixed
 
 bug2 - fixed
-
-
-bug3 - fixed
